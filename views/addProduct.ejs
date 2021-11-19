@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Add Product</title>
+      <link
+         rel="stylesheet"
+         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <h2 align="center">Add New Product</h2>
+               <a href="/getProducts" class="btn btn-success"
+                  >Get All Products</a
+               >
+               <form action="/addProduct" method="post">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <input
+                              type="text"
+                              name="productName"
+                              id=""
+                              class="form-control"
+                              placeholder="Product Name"
+                           />
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                           <input
+                              type="text"
+                              name="price"
+                              class="form-control"
+                              id=""
+                              placeholder="Product Price"
+                           />
+                        </div>
+                     </div>
+                     <div class="col-md-12">
+                        <div class="form-group">
+                           <textarea
+                              name="description"
+                              id=""
+                              cols="30"
+                              class="form-control"
+                              rows="10"
+                              placeholder="Product Description"
+                           ></textarea>
+                           <input
+                              type="hidden"
+                              name="access_token"
+                              value="<%= accessToken %>"
+                           />
+                        </div>
+                     </div>
+                     <div class="col-md-2">
+                        <input
+                           type="submit"
+                           class="btn btn-success"
+                           value="submit"
+                           name="submit "
+                        />
+                     </div>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
